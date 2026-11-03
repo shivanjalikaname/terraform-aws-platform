@@ -27,7 +27,6 @@ module "eks" {
 
   name               = local.name
   kubernetes_version = "1.34"
-  vpc_id             = module.vpc.vpc_id
   subnet_ids         = module.vpc.private_subnet_ids
 
   # Public endpoint restricted to known ranges so engineers can use kubectl without a VPN

@@ -19,11 +19,6 @@ variable "kubernetes_version" {
   }
 }
 
-variable "vpc_id" {
-  description = "VPC the cluster runs in."
-  type        = string
-}
-
 variable "subnet_ids" {
   description = "Private subnet IDs for the control plane ENIs and worker nodes (at least two AZs)."
   type        = list(string)

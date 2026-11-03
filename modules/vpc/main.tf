@@ -82,6 +82,7 @@ resource "aws_route_table_association" "public" {
 }
 
 resource "aws_eip" "nat" {
+  #checkov:skip=CKV2_AWS_19:These EIPs are attached to NAT gateways, which this check does not recognise
   count  = local.nat_count
   domain = "vpc"
   tags   = merge(var.tags, { Name = "${var.name}-nat-${var.azs[count.index]}" })

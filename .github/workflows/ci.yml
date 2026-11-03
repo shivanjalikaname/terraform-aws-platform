@@ -81,4 +81,3 @@ jobs:
           directory: .
           framework: terraform
           quiet: true
-          compact: true

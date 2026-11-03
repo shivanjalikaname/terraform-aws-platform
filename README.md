@@ -42,7 +42,6 @@ module "eks" {
   source = "github.com/shivanjalikaname/terraform-aws-platform//modules/eks?ref=main"
 
   name       = "payments"
-  vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnet_ids
 
   node_groups = {

@@ -15,7 +15,6 @@ mock_provider "aws" {
 
 variables {
   name       = "platform-test"
-  vpc_id     = "vpc-0123456789abcdef0"
   subnet_ids = ["subnet-0aaaaaaaaaaaaaaa1", "subnet-0bbbbbbbbbbbbbbb2"]
 
   node_groups = {
